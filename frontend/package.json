@@ -15,9 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "run-script-os",
-    "build:default": "react-scripts build && rm -rf ../src/main/resources/static && mv build ../src/main/resources/static",
-    "build:windows": "react-scripts build & rmdir /s /q ..\\src\\main\\resources\\static & rename build static & move static ..\\src\\main\\resources",
+    "build": "react-scripts build && rm -rf public && mv build public",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "install": "run-script-os",
