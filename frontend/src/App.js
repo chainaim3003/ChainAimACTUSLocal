@@ -11,14 +11,15 @@ class App extends Component {
   render() {
     return (
       <Layout>
-          <Routes>
-              <Route exact path='/' render={ props => <Landing {...props} />} />
-              <Route exact path='/form/:id' render={ props => <Form {...props} />} />
-              <Route exact path='/results' render={ props => <Results {...props} />} />
-              <Route component={NotFound}/>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/form/:id" element={<Form />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Layout>
     );
   }
 }
+
 export default App;
