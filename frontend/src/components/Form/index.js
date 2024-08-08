@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { Col, Grid, Row}  from 'react-bootstrap';
 import axios from 'axios';
 import Demo from '../Demo';
@@ -863,7 +863,7 @@ export class Form extends PureComponent {
         let formClassName = (this.state.showForm)?"unfolded":"folded";
 
         if( redirect ) {
-            return <Redirect to={{ pathname: '/results', state: { url:`/form/${match.params.id}`, formTerms: this.state.formTerms, contractId: this.state.requiredFields.contractID, data: results }}} />
+            return <Navigate to={{ pathname: '/results', state: { url:`/form/${match.params.id}`, formTerms: this.state.formTerms, contractId: this.state.requiredFields.contractID, data: results }}} />
         } else {  
             if(this.state.isFetching){
                 return (

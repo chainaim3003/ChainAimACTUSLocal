@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Col, Grid, Row} from 'react-bootstrap';
-import { Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import './Results.css';
 import { Graph } from '../Graph';
 
@@ -35,7 +35,7 @@ export class Results extends PureComponent {
         let { results, currentTab, contractId, redirect, url} = this.state;
 
         if(redirect)
-            return <Redirect to={{ pathname: url, state: { backFromResults: true, allAnswers: this.state.allAnswers, formTerms: this.state.formTerms }}} />
+            return <Navigate to={{ pathname: url, state: { backFromResults: true, allAnswers: this.state.allAnswers, formTerms: this.state.formTerms }}} />
 
         return (
             <div id="results-container" identifier="" version="">
