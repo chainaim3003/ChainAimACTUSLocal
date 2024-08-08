@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Contract } from '../Contract';
-import { Grid, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import './Landing.css';
 
@@ -34,8 +34,8 @@ export class Landing extends PureComponent {
 		{/* intro text */}
 	    <div className="section-intro">Choose a Contract Type from the list below in order to define and evaluate specific financial contracts:</div>
             
-        {/* contract grid */}
-                <Grid className="contract-grid">
+        {/* contract Container */}
+                <Container className="contract-grid">
                     <Row>
                         {
                             Object.keys(contractDetails).map( (key) => 
@@ -51,7 +51,7 @@ export class Landing extends PureComponent {
                             )
                         }
                     </Row>
-                </Grid>
+                </Container>
             </div>
         );
     }

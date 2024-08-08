@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Col, Grid, Row} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 import { Navigate } from 'react-router-dom'
 import './Results.css';
 import { Graph } from '../Graph';
@@ -39,7 +39,7 @@ export class Results extends PureComponent {
 
         return (
             <div id="results-container" identifier="" version="">
-                <Grid fluid>
+                <Container fluid>
                     <Row>
                         <Col sm={12} className="results-main-wrapper">
                             <span className="results-title">RESULT: &nbsp;<span className="contract-id">Contract ID - {contractId}</span></span>
@@ -57,7 +57,7 @@ export class Results extends PureComponent {
                     {currentTab === 'Table' && 
                     <Row>
                         <Col sm={12}>
-                            <Grid fluid className="results-table-wrapper">
+                            <Container fluid className="results-table-wrapper">
                                 <Row className="table-header-container">
                                     <Col sm={1} className="table-header">Event Date</Col>
                                     <Col sm={1} className="table-header">Event Type</Col>
@@ -87,11 +87,11 @@ export class Results extends PureComponent {
                                     )
                                 })
                             }
-                            </Grid>
+                            </Container>
                         </Col>
                     </Row>
                     }
-                </Grid>
+                </Container>
             </div>          
         )
     }

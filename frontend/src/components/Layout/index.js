@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Grid, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../Header';
 import Footer from '../Footer';
 import './Layout.css';
@@ -9,7 +9,7 @@ export class Layout extends Component {
 
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Col sm={12} >
             <div className="main-container">
@@ -19,7 +19,7 @@ export class Layout extends Component {
             </div>
           </Col>
           </Row>
-      </Grid>
+      </Container>
     );
   }
 }

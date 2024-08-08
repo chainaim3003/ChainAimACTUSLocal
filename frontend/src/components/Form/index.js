@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Navigate } from 'react-router-dom'
-import { Col, Grid, Row}  from 'react-bootstrap';
+import { Col, Container, Row}  from 'react-bootstrap';
 import axios from 'axios';
 import Demo from '../Demo';
 
@@ -872,7 +872,7 @@ export class Form extends PureComponent {
             } else {
                 return (
                     <div id="form-container" identifier={ identifier } >
-                        <Grid fluid>
+                        <Container fluid>
                             <Row>
                                 <Col sm={12} className={`contract-main-wrapper demo ${demosClassName}`} onClick={()=>this.toggleDemos()}>
                                     <span className="contract-title">Demo Case</span>
@@ -881,7 +881,7 @@ export class Form extends PureComponent {
                             {this.state.showDemos && 
                                 <Row>
                                     <Col sm={12} className="demo-items-wrapper">
-                                        <Grid fluid>
+                                        <Container fluid>
                                             <Row className="demo-row">
                                             {demos.sort((a, b) => a.contract.contractID - b.contract.contractID).map((d, i)=> {
                                                     return (
@@ -889,7 +889,7 @@ export class Form extends PureComponent {
                                                     )
                                                 })}
                                             </Row>
-                                        </Grid>
+                                        </Container>
                                     </Col>
                                 </Row>
                             }
@@ -905,7 +905,7 @@ export class Form extends PureComponent {
                                     <div className="term-group-header">All fields below are mandatory to fill in:</div>
                                     <div className="field-wrapper">
                                         <div className="items-group">
-                                            <Grid fluid>
+                                            <Container fluid>
                                                 <Row>
                                                     {mandatoryFields.map((m, groupId) => {
                                                             // for each mandatory term add a field in the form and
@@ -931,7 +931,7 @@ export class Form extends PureComponent {
                                                         })
                                                     }
                                                 </Row>
-                                            </Grid>
+                                            </Container>
                                         </div>
                                     </div>
                                 </Col>
@@ -945,7 +945,7 @@ export class Form extends PureComponent {
                                                     <div id={group.shortName} className="items-group">
                                                         <div className="item-header" onClick={()=>this.foldOptions(index)}>{group.group}</div>
                                                         {group.visible && 
-                                                            <Grid fluid>
+                                                            <Container fluid>
                                                                 <Row>
                                                                 {
                                                                     group.Items.map((item, index) => {
@@ -975,7 +975,7 @@ export class Form extends PureComponent {
                                                                     })
                                                                 }
                                                                 </Row>
-                                                            </Grid>
+                                                            </Container>
                                                         }
                                                     </div>
                                                 </div>
@@ -999,7 +999,7 @@ export class Form extends PureComponent {
                                         <div className="term-group-header">All fields below are mandatory to fill in:</div>
                                         <div className="field-wrapper">
                                             <div className="items-group">
-                                                <Grid fluid>
+                                                <Container fluid>
                                                     <Row>
                                                         {leg1MandatoryFields.map((m, groupId) => {
                                                             if(m.identifier==="contractType") {
@@ -1050,7 +1050,7 @@ export class Form extends PureComponent {
                                                         })
                                                         }
                                                     </Row>
-                                                </Grid>
+                                                </Container>
                                             </div>
                                         </div>
                                     </Col>
@@ -1064,7 +1064,7 @@ export class Form extends PureComponent {
                                                         <div id={group.shortName} className="items-group">
                                                             <div className="item-header" onClick={()=>this.foldLeg1Options(index)}>{group.group}</div>
                                                             {group.visible && 
-                                                                <Grid fluid>
+                                                                <Container fluid>
                                                                     <Row>
                                                                     {
                                                                         group.Items.map((item, index) => {
@@ -1094,7 +1094,7 @@ export class Form extends PureComponent {
                                                                         })
                                                                     }
                                                                     </Row>
-                                                                </Grid>
+                                                                </Container>
                                                             }
                                                         </div>
                                                     </div>
@@ -1116,7 +1116,7 @@ export class Form extends PureComponent {
                                         <div className="term-group-header">All fields below are mandatory to fill in:</div>
                                         <div className="field-wrapper">
                                             <div className="items-group">
-                                                <Grid fluid>
+                                                <Container fluid>
                                                     <Row>
                                                         {leg2MandatoryFields.map((m, groupId) => {
                                                                 if(m.identifier==="contractType") {
@@ -1167,7 +1167,7 @@ export class Form extends PureComponent {
                                                             })
                                                         }
                                                     </Row>
-                                                </Grid>
+                                                </Container>
                                             </div>
                                         </div>
                                     </Col>
@@ -1181,7 +1181,7 @@ export class Form extends PureComponent {
                                                         <div id={group.shortName} className="items-group">
                                                             <div className="item-header" onClick={()=>this.foldLeg2Options(index)}>{group.group}</div>
                                                             {group.visible && 
-                                                                <Grid fluid>
+                                                                <Container fluid>
                                                                     <Row>
                                                                     {
                                                                         group.Items.map((item, index) => {
@@ -1211,7 +1211,7 @@ export class Form extends PureComponent {
                                                                         })
                                                                     }
                                                                     </Row>
-                                                                </Grid>
+                                                                </Container>
                                                             }
                                                         </div>
                                                     </div>
@@ -1237,7 +1237,7 @@ export class Form extends PureComponent {
                                         <div className="term-group-header">All fields below are mandatory to fill in:</div>
                                         <div className="field-wrapper">
                                             <div className="items-group">
-                                                <Grid fluid>
+                                                <Container fluid>
                                                     <Row>
                                                         {underlyingMandatoryFields.map((m, groupId) => {
                                                             if(m.identifier==="contractType") {
@@ -1288,7 +1288,7 @@ export class Form extends PureComponent {
                                                         })
                                                         }
                                                     </Row>
-                                                </Grid>
+                                                </Container>
                                             </div>
                                         </div>
                                     </Col>
@@ -1302,7 +1302,7 @@ export class Form extends PureComponent {
                                                         <div id={"underlying-" + group.shortName} className="items-group">
                                                             <div className="item-header" onClick={()=>this.foldUnderlyingOptions(index)}>{group.group}</div>
                                                             {group.visible && 
-                                                                <Grid fluid>
+                                                                <Container fluid>
                                                                     <Row>
                                                                     {
                                                                         group.Items.map((item, index) => {
@@ -1332,7 +1332,7 @@ export class Form extends PureComponent {
                                                                         })
                                                                     }
                                                                     </Row>
-                                                                </Grid>
+                                                                </Container>
                                                             }
                                                         </div>
                                                     </div>
@@ -1353,7 +1353,7 @@ export class Form extends PureComponent {
                                     <input type="submit" value="EXPORT TERMS" onClick={(e) => this.handleExport(e)}/>
                                 </Col>
                             </Row>
-                        </Grid>
+                        </>
                     </div>
                 );
             }
