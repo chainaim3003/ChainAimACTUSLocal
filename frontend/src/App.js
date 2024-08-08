@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Form } from './components/Form';
 import { Results } from './components/Results';
@@ -11,12 +11,12 @@ class App extends Component {
   render() {
     return (
       <Layout>
-          <Switch>
+          <Routes>
               <Route exact path='/' render={ props => <Landing {...props} />} />
               <Route exact path='/form/:id' render={ props => <Form {...props} />} />
               <Route exact path='/results' render={ props => <Results {...props} />} />
               <Route component={NotFound}/>
-          </Switch>
+          </Routes>
       </Layout>
     );
   }
