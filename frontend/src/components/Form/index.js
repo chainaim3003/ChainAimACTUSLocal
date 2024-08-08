@@ -1353,7 +1353,7 @@ export class Form extends PureComponent {
                                     <input type="submit" value="EXPORT TERMS" onClick={(e) => this.handleExport(e)}/>
                                 </Col>
                             </Row>
-                        </>
+                        </Container>
                     </div>
                 );
             }
