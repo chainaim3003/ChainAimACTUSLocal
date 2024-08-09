@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ToolTip from './ToolTip'; // Assuming ToolTip is a custom component
+import ToolTip from '../ToolTip'; // Assuming ToolTip is a custom component
 
 class ContractForm extends Component {
     constructor(props) {
